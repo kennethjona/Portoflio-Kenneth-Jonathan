@@ -1,0 +1,265 @@
+/* ====================================================================
+   KENNETH JONATHAN — MIDNIGHT ELECTRIC
+   Color-art-direction layer. Keeps the editorial layouts, animations,
+   project content, and original scripts completely intact.
+   Edit the palette values below to explore alternative colorways.
+   ==================================================================== */
+:root {
+  color-scheme: dark;
+  --night: #080b14;
+  --night-soft: #11192b;
+  --night-deep: #050812;
+  --night-raised: #19243a;
+  --paper: #e8edf7;
+  --paper-deep: #dce5f5;
+  --ink: #121c32;
+  --accent: #2563eb;
+  --accent-bright: #4b8aff;
+  --accent-ice: #9bc7ff;
+  --muted: #52627f;
+  --muted-on-dark: #b0bed9;
+  --rule: rgba(17,34,65,.19);
+  --rule-dark: rgba(163,195,255,.22);
+  --blue-glow: rgba(37,99,235,.32);
+  --heading: 'Outfit', 'Arial Black', sans-serif;
+  --body: 'Outfit', 'Helvetica Neue', sans-serif;
+}
+
+::selection { background: #2563eb; color: #fff; }
+:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 5px; }
+.dark-section :focus-visible { outline-color: var(--accent-ice); }
+body { background: var(--night-deep); }
+.dark-section { background-color: var(--night); color: #edf4ff; }
+.light-section { background-color: var(--paper); color: var(--ink); }
+.blue-text { color: var(--accent-ice); }
+.blue-dot { background: var(--accent-bright); box-shadow: 0 0 0 5px rgba(75,138,255,.12), 0 0 16px rgba(75,138,255,.48); }
+
+/* Signature brand. Blue stays in small, intentional details. */
+.logo-period, .footer-logo span { color: var(--accent-bright); }
+.reading-progress span { background: linear-gradient(90deg,#2563eb,#81bdff); mix-blend-mode: normal; box-shadow: 0 0 12px rgba(75,138,255,.6); }
+.preloader { background: radial-gradient(circle at 50% 45%,#122448 0%,#080b14 54%,#03050b 100%); }
+.preloader-blob { color: #b8dcff; filter: drop-shadow(0 0 12px rgba(75,138,255,.8)) drop-shadow(0 0 34px rgba(37,99,235,.42)); }
+.preloader-inner strong span { color: var(--accent-bright); }
+.preloader-caption { color: #b7c7e5; }
+.preloader-skip { color: #f1f6ff; border-color: rgba(144,179,245,.36); }
+.preloader-skip:hover { background: rgba(75,138,255,.14); }
+
+/* Navigation: depth instead of grey glass. */
+.site-header, .site-header.scrolled, .site-header.on-dark:not(.scrolled) { color: #f6faff; }
+.nav { background: rgba(9,16,33,.82); border-color: rgba(154,192,255,.27); color: #f7fbff; box-shadow: 0 12px 60px rgba(2,8,26,.26),inset 0 1px 0 rgba(230,240,255,.11); }
+.logo { color: #fff; }
+.logo-sub { color: #bdcdea; }
+.nav-links > a { color: #e5efff; }
+.nav-links > a:hover,.nav-links > a:focus-visible { background: #e9f0ff; color: #101e38; }
+.nav-links > .nav-contact,.site-header.on-dark:not(.scrolled) .nav-contact { color: #fff; background: #2563eb; box-shadow: 0 4px 24px rgba(37,99,235,.22); }
+.nav-links > .nav-contact:hover,.nav-links > .nav-contact:focus-visible { color: #fff; background: #417dfa; box-shadow: 0 0 25px rgba(37,99,235,.36); }
+.custom-cursor { background: #e8f5ff; border-color: #b5d6ff; mix-blend-mode: difference; }
+
+/* HERO: midnight stage / silver type / cutout floating over a blue halo. */
+.hero.light-section { background: radial-gradient(ellipse at 51% 69%,rgba(37,99,235,.16),transparent 43%),linear-gradient(145deg,#0b1224 0%,#080b14 54%,#0a152d 100%); color: #eef4ff; isolation: isolate; }
+.hero::before { content:'';position:absolute;pointer-events:none;inset:0;opacity:.85;background:radial-gradient(circle at 83% 19%,rgba(63,111,248,.09),transparent 26%),radial-gradient(circle at 8% 80%,rgba(65,114,255,.07),transparent 33%); }
+.hero-gridlines { opacity:.65; background-image:linear-gradient(90deg,transparent calc(20% - .5px),rgba(122,158,221,.095) 20%,transparent calc(20% + .5px)),linear-gradient(90deg,transparent calc(80% - .5px),rgba(122,158,221,.095) 80%,transparent calc(80% + .5px)); }
+.hero-overline { color:#bbcae7; border-bottom-color:rgba(165,194,248,.24); }
+.hero-preface { color:#aac9ff; }
+.hero-name { color:#f1f6ff; text-shadow:0 5px 55px rgba(0,0,0,.15); }
+.hero-name .split-char { color:#f0f5ff; }
+.hero-name > span:nth-child(2) .split-char { background:linear-gradient(180deg,#f0f5ff 3%,#d8e6ff 34%,#5390fb 69%,rgba(37,99,235,.18) 100%); -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent; }
+.hero-name .hero-stop,.hero-stop { color:#4b8aff; -webkit-text-fill-color:#4b8aff; text-shadow:0 0 38px rgba(54,115,251,.35); }
+.photo-aura { background:radial-gradient(circle at 49% 42%,#244a92 0%,#102c61 48%,#0a1938 70%,rgba(11,31,66,.12) 82%); box-shadow:inset 0 0 90px rgba(8,12,28,.7),0 0 100px rgba(37,99,235,.15); }
+.photo-aura::before { border:1px solid rgba(166,199,255,.32); }
+.photo-aura::after { border:1px solid rgba(75,138,255,.22); box-shadow:0 0 28px rgba(37,99,235,.08); }
+.hero-photo { filter:grayscale(1) contrast(1.12) brightness(.97) drop-shadow(12px 23px 29px rgba(0,0,0,.52)); }
+.photo-cross { color:#71adff; }
+.hero-side-note { color:#c4d5f3; }
+.hero-arrow { color:#4b8aff; }
+.hero-intro p { color:#e2ecff; }
+.hero-intro strong { color:#fff; }
+.hero-footer { border-top-color:rgba(166,197,246,.2); }
+.hero-footer p { color:#c0cee6; }
+.hero-about-link,.text-link { color:#ebf4ff; }
+.text-link { border-color:rgba(176,208,255,.5); }
+.text-link:hover,.underlined-link:hover,.hero-about-link:hover { color:#6ca4ff; }
+.hero-scroll { color:#8fa7c8; }
+
+/* ABOUT: charcoal blue with an understated blue luminous flow field. */
+.about-reimagined { background:linear-gradient(180deg,#050812 0%,#0a1122 58%,#080d1b 100%); }
+#flow-canvas { opacity:.46; filter:sepia(1) saturate(2) hue-rotate(171deg); }
+.about-sticky-scene::after { background:radial-gradient(ellipse at 50% 50%,transparent 0%,rgba(5,8,18,.64) 68%,#080d1b 100%); }
+.about-card { background:rgba(22,42,78,.29); border-color:rgba(147,193,255,.55); box-shadow:inset 0 0 46px rgba(71,124,232,.12),0 0 65px rgba(37,99,235,.19); }
+.about-card strong { color:#eff5ff; }
+.about-card-cross { color:#7fb1ff; }
+.about-card small,.about-scene-index { color:#b5c8e9; }
+.about h2 .blue-text,.about-stamp strong { color:#79aaff; }
+.about h2 .outline-word { -webkit-text-stroke:1px #8fb6ff; }
+.about-copy p:first-child { color:#f1f5ff; }
+.about-copy p { color:#b9c9e2; }
+.about-principles { border-color:rgba(129,170,242,.3); }
+.about-principles span { color:#91b8ff; }
+.about-principles p { color:#becbe1; }
+
+/* SPOTLIGHT: blue-white light cone and a monochrome silhouette. */
+.spotlight { background:radial-gradient(ellipse at 60% 78%,#0d1b39 0%,#080c1b 40%,#040711 100%); }
+.spotlight::before { background:radial-gradient(ellipse at 54% 80%,rgba(52,111,237,.18),transparent 57%); }
+.spotlight-light { background:linear-gradient(180deg,rgba(172,208,255,.3),rgba(60,120,249,.11) 45%,transparent 100%); opacity:.7; }
+.spotlight-photo { filter:grayscale(1) brightness(.67) contrast(1.3) drop-shadow(0 0 36px rgba(60,126,245,.32)); }
+.spotlight-eyebrow { color:#9dbaf0; }
+.spotlight-copy p { color:#f5f8ff; text-shadow:0 9px 55px rgba(0,0,0,.7); }
+.spotlight-primary { background:#edf5ff;color:#0b1b38;box-shadow:0 0 55px rgba(66,131,255,.3); }
+.spotlight-primary:hover { background:#c8e1ff; }
+.spotlight-secondary { border-color:rgba(156,198,255,.58); color:#f2f7ff; }
+.spotlight-secondary:hover { background:rgba(74,130,242,.18); }
+
+/* Project gallery and carousel: icy porcelain surface, authentic full-color projects. */
+.work.light-section { background:linear-gradient(180deg,#ebf0fb 0%,#e5ebf7 74%,#edf2fc 100%); color:#142037; }
+.work-heading-row .muted-word { color:#95a7c5; }
+.work-heading-row p,.project-description p { color:#53627d; }
+.project-topline,.project-bottom { border-color:rgba(26,49,88,.2); }
+.project-caps,.inline-note { color:#647492; }
+.carousel-stage:focus-visible { outline-color:#2563eb; }
+.carousel-bottom { border-top-color:rgba(17,34,65,.28); }
+.carousel-navigation button { border-color:#1c3359; color:#19345f; background:rgba(255,255,255,.27); }
+.carousel-navigation button:hover,.carousel-navigation button:focus-visible { color:#fff;background:#2563eb;border-color:#2563eb; }
+.carousel-progress { background:#bed0e9; }
+.carousel-progress span { background:linear-gradient(90deg,#2563eb,#7db8ff); }
+.round-action { border-color:#244378;color:#244378; }
+.round-action:hover,.round-action:focus-visible { background:#2563eb;color:#fff;border-color:#2563eb; }
+.inline-link:hover { color:#2563eb; }
+.nova-showcase { background:radial-gradient(circle at 87% 3%,rgba(36,94,194,.26),transparent 38%),#0c1427; }
+.nova-logo span:first-child { color:#b7d4ff; }
+.nova-plus,.nova-interface div span { color:#6c9bff; }
+.nova-circle { border-color:rgba(88,146,255,.42);box-shadow:0 0 0 70px rgba(43,99,210,.07),0 0 0 140px rgba(43,99,210,.04); }
+.cipher-showcase { background:linear-gradient(145deg,#101a30,#1a2a48); }
+.cipher-editor { border-color:rgba(130,172,244,.35);background:#0b1020; }
+.cipher-visual strong { color:#8ebdff; }
+
+/* Six-petal transition as a quietly luminous system diagram. */
+.transition-statement { background:radial-gradient(circle at 79% 48%,#112a50 0%,#0b152b 32%,#070b16 76%); }
+.transition-statement p,.transition-statement .shell > span { color:#e9f2ff; }
+.transition-statement strong { color:#87b7ff; }
+.works-orbit { opacity:.44; }
+.works-orbit-petals i { border-color:#89b5ff; box-shadow:inset 0 0 26px rgba(53,103,213,.05),0 0 10px rgba(75,138,255,.11); }
+.works-orbit-center { color:#cbdcf7; }
+.works-orbit-center strong { color:#e9f2ff; }
+
+/* Experience: frosted lilac-blue pages and one dark, contrasting panel. */
+.experience.light-section { background:linear-gradient(180deg,#e4ebf8 0%,#edf2fc 100%); color:#15233e; }
+.experience-ghost { -webkit-text-stroke:1px rgba(22,66,141,.14); }
+.experience-row { background:#f3f6fd; border-color:rgba(27,58,106,.23); box-shadow:0 13px 32px rgba(23,48,99,.035); }
+.experience-row:nth-child(2) { background:linear-gradient(145deg,#101a32 0%,#142f60 100%); color:#f0f6ff;border-color:#244477; box-shadow:0 23px 65px rgba(10,31,75,.13); }
+.experience-row:nth-child(2) .experience-number { color:#83b1ff; }
+.experience-row:nth-child(2) .experience-type,.experience-row:nth-child(2) p,.experience-row:nth-child(2) .experience-tag { color:#c5d8f5; }
+.experience-number { color:#2b63bd; }
+.experience-row p { color:#566680; }
+.experience-type,.experience-tag { color:#536784; }
+.experience-position > div { background:#bfd0ea; }
+#experience-progress-line { background:#2563eb; }
+
+/* Skills: understated typographic blue accents, not a neon dashboard. */
+.skills { background:radial-gradient(ellipse at 100% 12%,rgba(38,85,179,.13),transparent 47%),#080d1b; }
+.skills .split-heading p { color:#b5c5e2; }
+.skill-line { border-color:rgba(160,195,255,.19); }
+.skill-line > span:first-child,.skill-line p { color:#b3c4e0; }
+.skill-line > span:last-child,.skill-line h3 b { color:#7fb0ff; }
+.now-learning p { color:#c6d5eb; }
+.now-learning > .blue-dot { background:#4b8aff; }
+
+/* Philosophy: daylight chapter, a visual breath between darker scenes. */
+.philosophy.light-section { background:#e8edf7; color:#16243d; }
+.philosophy h2 > span { color:#95a9c7; }
+.philosophy h2 em { color:#2864dc; }
+.principle-grid article { border-color:#294d83; }
+.principle-grid article > span { color:#466aa3; }
+.principle-grid p { color:#556784; }
+
+/* Future: cool, pale-blue gradient with sharp navy hierarchy. */
+.future.light-section { background:linear-gradient(138deg,#dbe7fa 0%,#e8effb 56%,#dce9fb 100%); color:#15243f; }
+.future h2 em { color:#2563eb; }
+.future h2 > span { -webkit-text-stroke:2px #224477; }
+.future-copy p { color:#2c4366; }
+.future-index { color:#385e9b; }
+
+/* Chrome contact type picks up a subtle blue tint. */
+.contact { background:radial-gradient(ellipse at 50% -5%,rgba(43,92,197,.22),transparent 53%),#060a15; }
+.contact h2 { background:linear-gradient(172deg,#fff 5%,#b8d7ff 19%,#f4f9ff 32%,#678ac5 54%,#fefeff 63%,#789bcc 82%,#eef7ff 94%); -webkit-background-clip:text;background-clip:text;-webkit-text-stroke:.4px rgba(215,233,255,.25);filter:drop-shadow(0 10px 20px rgba(1,7,23,.7)); }
+.contact h2 em,.contact h2 > span { color:inherit; }
+.contact-mini,.contact-empty,.footer > span { color:#acbfdc; }
+.contact-bottom > p { color:#e0eaff; }
+.contact-links a { border-color:rgba(162,201,255,.45); }
+.contact-links a:hover,.contact-links a:focus-visible { background:#dfeeff;color:#10203d; }
+.contact-return { border-color:#85aef5; }
+.contact-dock { background:linear-gradient(145deg,rgba(28,47,85,.9),rgba(11,21,42,.96));border-color:rgba(161,196,255,.34);box-shadow:0 18px 52px rgba(0,5,22,.55),inset 0 1px 0 rgba(230,242,255,.12); }
+.contact-dock a { color:#eef6ff;background:linear-gradient(140deg,rgba(111,160,248,.21),rgba(51,86,149,.07));border-color:rgba(167,197,250,.26); }
+.contact-dock a:hover,.contact-dock a:focus-visible { background:rgba(50,110,232,.38); }
+.back-to-top { color:#c6d9f7; }
+.back-to-top:hover { color:#86b6ff; }
+
+/* Case studies: keep photographic colors, increase legibility in the overlay. */
+.project-dialog { background:#edf2fa;color:#172642; }
+.project-dialog .dialog-top { background:rgba(235,241,251,.96); border-color:rgba(27,59,111,.2); }
+.project-dialog::backdrop { background:rgba(3,9,23,.85); }
+.dialog-kicker { color:#215fd3; }
+.dialog-section p { color:#4f607e; }
+.dialog-links a:hover { color:#2563eb; }
+.dialog-media img { background:#dde6f5; }
+
+/* Mobile polish and accessible light/dark transitions. */
+@media (max-width:760px) {
+  .nav-links { background:rgba(8,15,32,.98); border-color:rgba(154,192,255,.32); box-shadow:0 20px 65px rgba(0,4,21,.55); }
+  .nav-links a { color:#eaf3ff; }
+  .nav-links > .nav-contact { color:#fff; background:#2563eb; }
+  .menu-toggle { color:#edf5ff; }
+  .hero-name > span:nth-child(2) .split-char { background:linear-gradient(180deg,#eef5ff 1%,#b7d0fb 55%,rgba(73,132,245,.35) 100%); -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent; }
+  .hero-name .hero-stop { -webkit-text-fill-color:#6fa4ff; }
+  .hero-photo-wrap { filter:drop-shadow(0 22px 20px rgba(2,11,33,.3)); }
+  .hero-preface { color:#accaff; }
+  .hero-side-note { color:#c3d5f2; }
+  .carousel-stage .project-bottom h3 { color:#1b2c48; }
+  .experience-row:nth-child(2) { background:#11254d; }
+  .contact-dock { border-color:rgba(162,202,255,.3); }
+}
+@media (prefers-reduced-motion:reduce) {
+  .hero-photo { filter:grayscale(1) contrast(1.12) brightness(.97); }
+  .works-orbit-inner { transform:translate(-50%,-50%) !important; }
+}
+
+/* A static 3D positioning transform is still needed when animations are
+   disabled. The base reveal fallback otherwise forces every carousel card to
+   transform:none and moves its button outside the visible stage. */
+@media (prefers-reduced-motion:reduce) {
+  .js-ready .carousel-stage .project[data-reveal] {
+    transform: translate3d(calc(-50% + var(--card-x,0px)),0,var(--card-z-depth,0px)) rotateY(var(--card-rotation,0deg)) scale(var(--card-scale,1)) !important;
+    transition:none !important;
+  }
+}
+@media (prefers-reduced-motion:reduce) and (max-width:760px) {
+  .js-ready .carousel-stage .project[data-reveal] {
+    transform:translate3d(0,0,0) scale(var(--card-scale,1)) !important;
+  }
+}
+
+/* Keep the small side annotation legible when it crosses the white portrait
+   on narrow screens. It remains decorative and does not obstruct actions. */
+@media (max-width:760px) {
+  .hero-side-note {
+    background:rgba(7,15,34,.79);
+    border-right:2px solid rgba(107,164,255,.7);
+    padding:7px 9px;
+    color:#dbe9ff;
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+  }
+}
+
+/* Preserve carousel layout after scroll reveal. The legacy reveal selector
+   also sets transform:translateY(0); without this override it cancels the
+   3D centering transform when a card enters the viewport. */
+.js-ready .carousel-stage .project[data-reveal] {
+  opacity:var(--card-opacity,1);
+  transform:translate3d(calc(-50% + var(--card-x,0px)),0,var(--card-z-depth,0px)) rotateY(var(--card-rotation,0deg)) scale(var(--card-scale,1));
+  transition:transform .85s var(--ease),opacity .85s var(--ease),filter .85s var(--ease);
+}
+@media (max-width:760px) {
+  .js-ready .carousel-stage .project[data-reveal] {
+    transform:translate3d(0,0,0) scale(var(--card-scale,1));
+  }
+}
